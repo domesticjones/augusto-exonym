@@ -104,9 +104,6 @@
     "yargs": "~11.0.0"
   },
   "dependencies": {
-    "bootstrap": "v4.1.1",
-    "jquery": "^3.3.1",
     "jquery-visible": "^1.2.0",
-    "popper.js": "^1.14.3"
   }
 }
