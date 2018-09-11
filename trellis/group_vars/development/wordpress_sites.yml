@@ -1,0 +1,21 @@
+# Documentation: https://roots.io/trellis/docs/local-development-setup/
+# `wordpress_sites` options: https://roots.io/trellis/docs/wordpress-sites
+# Define accompanying passwords/secrets in group_vars/development/vault.yml
+
+wordpress_sites:
+  augusto.dev:
+    site_hosts:
+      - canonical: augusto.dev
+        redirects:
+          - www.augusto.dev
+    local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
+    site_title: Augusto Fine Rugs
+    admin_user: developer
+    admin_email: exonym@domesticjones.com
+    multisite:
+      enabled: false
+    ssl:
+      enabled: true
+      provider: self-signed
+    cache:
+      enabled: false
