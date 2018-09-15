@@ -1,41 +1,85 @@
 /**
   Global Website Header
   ---------------------------------------------------------------------- */
-.header-top {
-  padding: 1rem 0;
-  z-index: 9999;
-  width: 100%;
-  background-color: $white;
+.nav-header {
+  @include navMenu(dropdown);
 
-  .wrap {
-    @include grid(space-between, center);
+  margin-left: auto;
+  font-weight: $font-light;
+
+  li a {
+    color: $gold;
+    padding: 0 1.15rem;
+
+    @include transition();
+
+    &:hover {
+      color: $black;
+    }
   }
+
+  .sub-menu {
+    background-color: $grey;
+    font-size: 1rem;
+
+    li a {
+      padding: 0.75rem 1rem;
+
+      @include transition();
+
+      &:hover {
+        background-color: $white;
+      }
+    }
+  }
+
+  li.current-menu-item {
+    font-weight: $font-semi;
+  }
+}
+
+#header {
+  @include grid(space-between, center);
+
+  padding: 1rem 2vw;
+  background-color: $grey;
 
   .nav-social {
     ul {
       @include listStripped();
-      @include grid();
+      @include grid(center, center);
 
-      li {
-        margin: 0 0.5em;
+      li:last-of-type {
+        margin-right: 0;
       }
+    }
 
-      a,
-      img {
-        display: block;
-        height: 2em;
-      }
+    a {
+      display: block;
+      padding: 1rem;
 
-      span {
-        display: none;
+      @include transition();
+
+      &:hover {
+        transform: scale(1.25);
       }
+    }
+
+    img {
+      display: block;
+      height: 1.25rem;
+    }
+
+    span {
+      display: none;
     }
   }
 }
 
 .logo-header {
   display: block;
-  height: 2.5rem;
+  height: 4rem;
+  width: auto;
 }
 
 #responsive-nav-toggle {
@@ -46,15 +90,6 @@
   Responsive Breakpoints
   ---------------------------------------------------------------------- */
 @media (max-width: 1024px) {
-  .header-top {
-    padding: 1rem;
-  }
-
-  .nav-header,
-  .header-top .nav-social {
-    display: none;
-  }
-
   #responsive-nav-toggle {
     display: block;
   }

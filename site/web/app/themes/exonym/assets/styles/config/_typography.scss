@@ -1,17 +1,17 @@
 /**
   Font Families & Settings
   ---------------------------------------------------------------------- */
-@import url("https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i");
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display');
 
-$font-default: "Lato", sans-serif;
-$font-heading: "Lato", sans-serif;
+$font-default: 'Josefin Sans', sans-serif;
+$font-heading: 'Playfair Display', serif;
 
 $font-size: 16px;
 
 $font-light: 300;
 $font-normal: 400;
+$font-semi: 600;
 $font-bold: 700;
-$font-ultra-bold: 900;
 
 $font-italic: italic;
 
