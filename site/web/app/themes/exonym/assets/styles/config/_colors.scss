@@ -1,13 +1,5 @@
 $white: #fff;
-$grey: #ccc;
-$black: #000;
-$red: #f00;
-$blue: #00f;
-
-$color-scheme: (
-  color-white: $white,
-  color-grey: $grey,
-  color-black: $black,
-  color-red: $red,
-  color-blue: $blue
-);
+$grey: #fbfbfb;
+$gold: #9f9578;
+$gold-trans: transparentize($gold, 0.2);
+$black: #808080;
