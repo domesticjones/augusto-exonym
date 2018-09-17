@@ -13,7 +13,7 @@
         $ig_obj = json_decode($ig_json, true, 512, JSON_BIGINT_AS_STRING);
         $user = $ig_obj['data'][0]['user']['username'];
       ?>
-      <ul>
+      <ul class="animate-on-enter">
         <li>
           <a href="https://instagram.com/<?php echo $user; ?>" target="_blank" class="ig-user">
             <span><?php echo esc_html('@' . $user); ?></span>

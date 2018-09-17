@@ -1,0 +1,17 @@
+/**
+  Home Page Template
+  ---------------------------------------------------------------------- */
+.slideshow-logo {
+  display: block;
+  position: absolute;
+  width: auto;
+  height: 26vw;
+  left: 50%;
+  transform: translate(-50%, 2vw);
+}
+
+.page-template-page-home {
+  .module-slideshow-slide {
+    height: 30vw;
+  }
+}

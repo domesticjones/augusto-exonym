@@ -1,0 +1,28 @@
+/**
+  Slideshow Globals
+  ---------------------------------------------------------------------- */
+.slick-track {
+  height: 30vw;
+  background-color: $black;
+}
+
+.slick-slide {
+  margin: 0;
+  display: block !important;
+  padding: 0;
+}
+
+.module-slideshow {
+  position: relative;
+}
+
+.module-slideshow-slide {
+  margin: 0;
+  height: 30vw;
+  background-size: cover;
+  background-position: center center;
+}
+
+.module-slideshow-description {
+  display: none;
+}

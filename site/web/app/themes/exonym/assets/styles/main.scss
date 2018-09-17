@@ -17,3 +17,14 @@
 @import "global/base";
 @import "global/header";
 @import "global/footer";
+@import "../../node_modules/slick-carousel/slick/slick.scss";
+
+/**
+  Modules
+  ---------------------------------------------------------------------- */
+@import "modules/slideshow";
+
+/**
+  Templates
+  ---------------------------------------------------------------------- */
+@import "templates/home";
