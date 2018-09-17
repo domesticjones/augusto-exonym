@@ -20,10 +20,10 @@
 
   .sub-menu {
     background-color: $grey;
-    font-size: 1rem;
+    font-size: 0.85rem;
 
     li a {
-      padding: 0.75rem 1rem;
+      padding: 0.75em 1.25rem;
 
       @include transition();
 
@@ -57,17 +57,23 @@
     a {
       display: block;
       padding: 1rem;
+      width: 3.15rem;
+      height: 3.15rem;
+      border-radius: 50%;
+      transform: scale(1) rotate(0);
+      transform-style: preserve-3d;
 
       @include transition();
 
       &:hover {
-        transform: scale(1.25);
+        transform: scale(1.1) rotate(0.02deg);
       }
     }
 
     img {
+      height: 1.15rem;
       display: block;
-      height: 1.25rem;
+      margin: 0 auto;
     }
 
     span {
@@ -83,13 +89,29 @@
 }
 
 #responsive-nav-toggle {
+  @include hamburgerMenu(12, $black, 0.5);
+
   display: none;
+  margin-right: 1rem;
 }
 
 /**
   Responsive Breakpoints
   ---------------------------------------------------------------------- */
 @media (max-width: 1024px) {
+  #header {
+    padding: 0.5rem;
+  }
+
+  .nav-header,
+  #header .nav-social {
+    display: none;
+  }
+
+  .logo-header {
+    height: 3rem;
+  }
+
   #responsive-nav-toggle {
     display: block;
   }
