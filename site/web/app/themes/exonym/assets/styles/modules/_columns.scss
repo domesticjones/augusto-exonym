@@ -1,0 +1,37 @@
+.module-columns {
+  background-color: $black;
+  padding: 4vw 0 3vw;
+  color: $white;
+}
+
+.module-columns-row {
+  @include listStripped();
+  @include grid(space-between);
+
+  & > li {
+    flex: 1 0 0;
+    padding: 2vw;
+
+    & > h2 {
+      text-align: center;
+      font-size: 1.25rem;
+    }
+
+    &:first-of-type {
+      padding-left: 0;
+    }
+
+    &:last-of-type {
+      padding-right: 0;
+    }
+  }
+}
+
+.module-columns-content {
+  font-size: 0.85rem;
+
+  & > * {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+}

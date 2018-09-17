@@ -1,0 +1,36 @@
+.page-template-page-legal {
+  #content {
+    padding-bottom: 6vw;
+
+    h2 {
+      font-size: 2rem;
+      font-weight: $font-light;
+      margin-bottom: 0.5em;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    p,
+    ul {
+      color: $gold;
+      font-weight: $font-semi;
+      font-size: 0.85rem;
+    }
+
+    h3 {
+      font-size: 1rem;
+      color: $gold;
+      padding: 0.25em 0;
+      margin-bottom: 1em;
+      font-weight: $font-bold;
+    }
+
+    a {
+      color: $gold;
+      font-style: $font-italic;
+      font-weight: $font-bold;
+    }
+  }
+}

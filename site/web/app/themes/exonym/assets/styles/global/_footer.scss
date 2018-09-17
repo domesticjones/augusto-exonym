@@ -58,7 +58,7 @@
 
     width: 2rem;
     height: 2rem;
-    margin: 0.5rem;
+    margin: 0.35rem;
     font-size: 0.65rem;
     color: $black;
     background-size: contain;
@@ -140,7 +140,7 @@
 }
 
 #footer {
-  padding-top: 4vw;
+  padding: 4vw 0 2vw 0;
 
   .wrap {
     @include grid(space-between);

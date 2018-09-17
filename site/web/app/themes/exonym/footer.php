@@ -2,17 +2,16 @@
   /* ==============
      DEFAULT FOOTER
      ============== */
+  $ig_access_token = '3297965403.1677ed0.ea1a910d9ea74f02a71f98b9f917eb51';
+  $ig_count = 5;
+  $ig_json_link = 'https://api.instagram.com/v1/users/self/media/recent/?';
+  $ig_json_link.= 'access_token=' . $ig_access_token . '&count=' . $ig_count;
+  $ig_json = @file_get_contents($ig_json_link);
+  $ig_obj = json_decode($ig_json, true, 512, JSON_BIGINT_AS_STRING);
+  $user = $ig_obj['data'][0]['user']['username'];
+  if($ig_json):
 ?>
     <footer id="footer-instagram">
-      <?php
-        $ig_access_token = '3297965403.1677ed0.ea1a910d9ea74f02a71f98b9f917eb51';
-        $ig_count = 5;
-        $ig_json_link = 'https://api.instagram.com/v1/users/self/media/recent/?';
-        $ig_json_link.= 'access_token=' . $ig_access_token . '&count=' . $ig_count;
-        $ig_json = file_get_contents($ig_json_link);
-        $ig_obj = json_decode($ig_json, true, 512, JSON_BIGINT_AS_STRING);
-        $user = $ig_obj['data'][0]['user']['username'];
-      ?>
       <ul class="animate-on-enter">
         <li>
           <a href="https://instagram.com/<?php echo $user; ?>" target="_blank" class="ig-user">
@@ -40,6 +39,7 @@
         <?php endforeach; ?>
       </ul>
     </footer>
+  <?php endif; ?>
     <footer id="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
       <div class="wrap">
         <div class="footer-left">

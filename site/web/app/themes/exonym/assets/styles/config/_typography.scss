@@ -106,9 +106,34 @@ h6 {
 }
 
 h1 {
-  font-size: 2.5em;
-  margin-bottom: 0.5em;
+  @include grid(center, center);
+
+  padding: 3.5vw 0;
+  font-size: 2.25em;
+  font-weight: $font-normal;
   font-family: $font-heading;
+
+  i {
+    color: $gold;
+    position: relative;
+    display: block;
+    margin-left: 3.5rem;
+    font-style: normal;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    text-transform: uppercase;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -2.5rem;
+      top: 50%;
+      display: block;
+      background-color: $gold;
+      width: 1.25rem;
+      height: 2px;
+    }
+  }
 }
 
 h2 {
@@ -131,10 +156,11 @@ h2 {
 
 h3 {
   font-size: 1.25em;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
+  font-weight: $font-light;
 
   strong {
-    font-size: 1.15em;
+    font-size: 1.15rem;
     font-weight: $font-bold;
   }
 }

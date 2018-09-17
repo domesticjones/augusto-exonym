@@ -13,7 +13,12 @@
     <?php endforeach; ?>
   </div>
   <?php if(is_front_page()): ?>
-    <img src="<?php ex_logo('primary', 'light'); ?>" alt="Logo for <?php ex_brand('legal'); ?>" class="slideshow-logo animate-on-enter animate-on-exit" />
-  <?php endif; ?>
+    <div class="slideshow-logo-wrap animate-on-enter animate-on-leave">
+      <img src="<?php ex_logo('primary', 'light'); ?>" alt="Logo for <?php ex_brand('legal'); ?>" class="slideshow-logo" />
+    </div>
+  <?php
+    elseif(is_page_template('views/page-about.php')):
+      get_page_template('views/module', 'testimonials');
+    endif; ?>
 </header>
 <?php endif; ?>
