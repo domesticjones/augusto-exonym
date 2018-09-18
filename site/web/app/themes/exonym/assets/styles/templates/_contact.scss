@@ -1,0 +1,84 @@
+.contact-wrap {
+  @include grid(flex-start, stretch);
+
+  padding: 4vw 0;
+}
+
+.contact-left {
+  width: 40%;
+  background-size: cover;
+  background-position: center center;
+}
+
+.contact-right {
+  width: 60%;
+  padding-left: 2vw;
+
+  h1 {
+    padding: 0 0 1em 0;
+    justify-content: flex-start;
+  }
+
+  form {
+    padding: 0;
+    margin: 0;
+    display: block;
+
+    label > span {
+      display: none;
+
+      &.wpcf7-form-control-wrap {
+        display: block;
+      }
+    }
+
+    br {
+      display: none;
+    }
+
+    p {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.contact-address {
+  margin: 2em 0;
+
+  a {
+    font-weight: $font-light;
+  }
+}
+
+.contact-info {
+  color: $gold;
+  font-weight: $font-semi;
+
+  a {
+    color: $gold;
+
+    @include transition();
+
+    &:hover {
+      color: $black;
+    }
+  }
+}
+
+.contact-details {
+  ul {
+    @include listStripped();
+  }
+
+  .name {
+    font-weight: $font-light;
+
+    &::after {
+      content: ' | ';
+    }
+  }
+}
+
+ul.contact-hours {
+  padding-bottom: 2em;
+}

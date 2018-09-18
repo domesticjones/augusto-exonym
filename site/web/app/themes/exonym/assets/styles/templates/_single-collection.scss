@@ -1,0 +1,60 @@
+.header-collection {
+  width: 100%;
+  height: 20vw;
+  background-size: cover;
+  background-position: center center;
+
+  span {
+    display: none;
+  }
+}
+
+.collection-more {
+  padding: 4vw 0;
+
+  h2 {
+    text-align: center;
+  }
+
+  nav {
+    @include grid(center, stretch, row, wrap);
+
+    a {
+      text-align: center;
+      display: block;
+      width: 15%;
+      margin: 2.5%;
+
+      @include transition();
+
+      &.is-current {
+        opacity: 0.4;
+      }
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  span,
+  i {
+    display: block;
+    line-height: 1.75;
+  }
+
+  span {
+    font-weight: $font-bold;
+    color: $gold;
+  }
+
+  i {
+    font-style: $font-light;
+    font-weight: $font-light;
+    color: $black;
+  }
+
+  br {
+    display: none;
+  }
+}

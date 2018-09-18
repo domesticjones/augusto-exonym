@@ -24,9 +24,16 @@
   ---------------------------------------------------------------------- */
 @import "modules/slideshow";
 @import "modules/columns";
+@import "modules/testimonials";
+@import "modules/content";
+@import "modules/awards";
+@import "modules/gallery";
 
 /**
   Templates
   ---------------------------------------------------------------------- */
 @import "templates/home";
 @import "templates/legal";
+@import "templates/about";
+@import "templates/contact";
+@import "templates/single-collection";

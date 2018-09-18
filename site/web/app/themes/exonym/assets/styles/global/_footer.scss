@@ -5,6 +5,7 @@
   @include grid(center, center, column);
   @include transition();
 
+  position: relative;
   font-size: 1.25rem;
   color: $black;
   width: 100%;
@@ -17,6 +18,18 @@
 
   &:hover {
     color: $gold;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    background-color: $grey;
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    z-index: 2;
+    left: calc(100% - 2rem);
+    transform: rotate(45deg);
   }
 }
 

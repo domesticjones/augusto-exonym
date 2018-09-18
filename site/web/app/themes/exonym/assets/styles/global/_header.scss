@@ -18,6 +18,14 @@
     }
   }
 
+  li.current-menu-item {
+    font-weight: $font-semi;
+  }
+
+  li.current-menu-parent > a {
+    font-weight: $font-semi;
+  }
+
   .sub-menu {
     background-color: $grey;
     font-size: 0.85rem;
@@ -32,15 +40,16 @@
       }
     }
   }
-
-  li.current-menu-item {
-    font-weight: $font-semi;
-  }
 }
 
 #header {
   @include grid(space-between, center);
 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
   padding: 1rem 2vw;
   background-color: $grey;
 

@@ -1,0 +1,61 @@
+.module-awards {
+  padding: 4vw 0 2vw 0;
+}
+
+.module-awards-list {
+  @include listStripped();
+  @include grid(center, stretch, row, wrap);
+
+  img {
+    height: 6rem;
+    width: auto;
+    margin: 2rem 0;
+
+    @include transition();
+  }
+
+  li {
+    @include grid(center, center, column);
+
+    width: 20vw;
+    margin: 5vw;
+    border: 2px solid $gold-trans;
+    padding: 2rem;
+
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  h2 {
+    font-size: 1.15rem;
+    font-style: $font-italic;
+    font-weight: $font-light;
+    margin: 0;
+    padding: 0;
+    line-height: 2rem;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: $font-semi;
+    margin: 0;
+    padding: 0;
+    line-height: 2rem;
+  }
+
+  h4 {
+    font-size: 1.15rem;
+    color: $gold;
+    margin: 0;
+    padding: 0;
+    font-weight: $font-light;
+    line-height: 2rem;
+  }
+}

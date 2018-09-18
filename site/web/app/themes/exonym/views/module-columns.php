@@ -1,4 +1,4 @@
-<section class="module-columns animate-on-enter">
+<section class="module-columns">
   <div class="wrap">
     <?php the_field('columns_heading'); ?>
     <?php if(have_rows('columns')): ?>

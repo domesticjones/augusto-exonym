@@ -19,10 +19,14 @@
   .module-slideshow-slide {
     height: 30vw;
   }
+
+  #content {
+    padding-top: 5rem;
+  }
 }
 
 .intro-content {
-  padding: 0 10vw 3vw 10vw;
+  padding: 0 7vw 3vw 7vw;
   color: $gold;
   font-weight: $font-semi;
   font-size: 0.85rem;
@@ -31,5 +35,17 @@
     color: $gold;
     font-style: $font-italic;
     font-weight: $font-bold;
+  }
+}
+
+.logo-home {
+  height: 3rem;
+  opacity: 0;
+
+  @include transition(all 750ms ease);
+
+  &.is-scrolled {
+    opacity: 1;
+    height: 4rem;
   }
 }

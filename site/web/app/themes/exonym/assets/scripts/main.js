@@ -11,6 +11,23 @@ jQuery(document).ready(() => {
 		$this.toggleClass('is-active');
 	});
 
+	// HEADER: Fade In Logo on Home Page
+	$(window).on('load', () => {
+		if ($('body').hasClass('page-template-page-home')) {
+			$('.logo-header').addClass('logo-home');
+		}
+	});
+	$(window).on('scroll resize', () => {
+		if ($('body').hasClass('page-template-page-home')) {
+			const headerHeight = $('.module-slideshow').outerHeight();
+			if($(window).scrollTop() > headerHeight) {
+				$('.logo-header').addClass('is-scrolled');
+			} else {
+				$('.logo-header').removeClass('is-scrolled');
+			}
+		}
+	});
+
 	// MODULE: Slideshow
 	$('.module-slideshow-wrap').slick({
 		arrows: false,
@@ -20,6 +37,18 @@ jQuery(document).ready(() => {
 		pauseOnFocus: false,
 		fade: true,
 		speed: 3500,
+	});
+
+	// MODULE: Testimonials
+	$('.module-testimonials-wrap').slick({
+		arrows: false,
+		autoplay: true,
+		pauseOnHover: false,
+		pauseOnFocus: false,
+		fade: true,
+		dots: true,
+		autoplaySpeed: 6500,
+		speed: 1000,
 	});
 
 	// MODULES: Parallax

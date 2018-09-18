@@ -13,6 +13,7 @@ body {
 
 #content {
   background-color: $white;
+  padding-top: 6rem;
 }
 
 .wrap {
@@ -48,13 +49,15 @@ a {
   ---------------------------------------------------------------------- */
 @media (min-width: 1025px) {
   .wrap {
-    width: 1150px;
+    width: 100%;
+    padding: 0 2rem;
   }
 }
 
 @media (min-width: 1400px) {
   .wrap {
-    width: 1400px;
+    width: 1200px;
+    padding: 0;
   }
 }
 
