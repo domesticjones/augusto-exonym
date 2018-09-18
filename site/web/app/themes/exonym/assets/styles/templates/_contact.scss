@@ -23,6 +23,7 @@
     padding: 0;
     margin: 0;
     display: block;
+    position: relative;
 
     label > span {
       display: none;
@@ -38,6 +39,61 @@
 
     p {
       padding-bottom: 0;
+      margin-top: 1rem;
+      position: relative;
+    }
+
+    input[type="submit"] {
+      margin-bottom: 0;
+    }
+  }
+
+  .screen-reader-response,
+  .wpcf7-display-none {
+    display: none;
+  }
+
+  .wpcf7-not-valid-tip {
+    color: $black;
+    position: absolute;
+    right: 0;
+    top: 0;
+    line-height: 2.5rem;
+    font-size: 0.75rem;
+    padding-right: 1rem;
+    background-image: linear-gradient(to right, transparentize($gold, 1), $gold-trans);
+  }
+
+  .wpcf7-response-output {
+    font-weight: $font-light;
+    font-size: 1.5em;
+    color: $black;
+    text-align: center;
+    padding: 20% 0;
+    position: absolute;
+    width: 105%;
+    height: 105%;
+    top: -2.5%;
+    left: -2.5%;
+    background-color: transparentize($white, 0.4);
+  }
+
+  .ajax-loader {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    opacity: 0;
+    width: 3rem;
+    height: 3rem;
+    background-image: url('../images/throbber-augusto.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include transition();
+
+    &.is-active {
+      opacity: 1;
     }
   }
 }

@@ -89,4 +89,12 @@ jQuery(document).ready(() => {
 			}
 		});
 	});
+
+	// TEMPLATE: Contact Error Handling
+	$('.wpcf7-response-output').click(e => {
+		$(e.currentTarget).fadeOut();
+	});
+	$('.wpcf7-form-control-wrap input, .wpcf7-form-control-wrap textarea').on('focus', e => {
+		$(e.currentTarget).next('span').fadeOut();
+	})
 });
