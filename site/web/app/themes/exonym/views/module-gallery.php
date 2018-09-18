@@ -4,7 +4,7 @@
 ?>
 <section class="module-gallery">
   <div class="wrap">
-    <ul class="module-gallery-items">
+    <ul id="module-gallery-items">
       <?php foreach($gallery as $image): ?>
         <li style="background-image: url(<?php echo $image['sizes']['small']; ?>)" data-image="<?php echo $image['sizes']['large']; ?>">
           <span class="gallery-title"><?php echo $image['title']; ?></span>
@@ -14,9 +14,11 @@
     </ul>
   </div>
 </section>
-<section class="module-gallery-overlay">
-  <div class="module-gallery-overlay-image"></div>
-  <div class="module-gallery-overlay-info">
+<section id="module-gallery-overlay">
+  <div id="module-gallery-overlay-image">
+    <div id="module-gallery-overlay-image-inner"></div>
+  </div>
+  <div id="module-gallery-overlay-info">
     <h1>Name of Rug</h1>
     <h2>Caption for Rug</h2>
     <h3>Collection: <strong><?php the_title(); ?></strong></h3>
@@ -26,7 +28,7 @@
   </div>
   <?php if($gallery): ?>
     <div class="module-gallery-overlay-slider">
-      <div class="module-gallery-overlay-thumbs">
+      <div id="module-gallery-overlay-thumbs">
         <?php foreach($gallery as $thumb): ?>
           <div>
             <img src="<?php echo $thumb['sizes']['small']; ?>" alt="<?php echo $thumb['alt']; ?>" class="overlay-thumb" />

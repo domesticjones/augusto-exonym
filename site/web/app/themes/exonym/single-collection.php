@@ -23,8 +23,6 @@
   $collectionsQueryArgs = array(
     'post_type'              => array('collection'),
     'posts_per_page'         => '-1',
-    'order'                  => 'ASC',
-    'orderby'                => 'title',
   );
   $collectionsQuery = new WP_Query($collectionsQueryArgs);
   if($collectionsQuery->have_posts()):

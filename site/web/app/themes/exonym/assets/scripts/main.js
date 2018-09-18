@@ -51,6 +51,53 @@ jQuery(document).ready(() => {
 		speed: 1000,
 	});
 
+	// MODULE: Gallery Overlay
+	$('#module-gallery-items li').on('click', (e) => {
+		$('#module-gallery-overlay-image-inner').css('background-image', 'initial');
+		const $this = $(e.currentTarget);
+		const image = $this.data('image');
+		const title = $this.find('.gallery-title').text();
+		const caption = $this.find('.gallery-caption').text();
+		const index = $this.index();
+		$('#module-gallery-overlay-image-inner').css('background-image', `url(${image})`);
+		$('#module-gallery-overlay-info h1').text(title);
+		$('#module-gallery-overlay-info h2').text(caption);
+		$('#module-gallery-overlay').addClass('is-active');
+		$('#module-gallery-overlay-thumbs').slick('slickGoTo', parseInt(index));
+	});
+	$('#overlay-close').on('click', () => {
+		$('#module-gallery-overlay').removeClass('is-active');
+	});
+
+	// MODULE: Gallery Thumbs
+	$('#module-gallery-overlay-thumbs').slick({
+		vertical: true,
+		slidesToShow: 3,
+		centerMode: true,
+		focusOnSelect: true,
+		speed: 1500,
+	});
+	$('#module-gallery-overlay-thumbs').on('afterChange', () => {
+		const currentSlide = $('#module-gallery-overlay-thumbs').slick('slickCurrentSlide');
+		const $list = $('#module-gallery-items li').eq(currentSlide);
+		const image = $list.data('image');
+		const title = $list.find('.gallery-title').text();
+		const caption = $list.find('.gallery-caption').text();
+		$('#module-gallery-overlay-image-inner').css('background-image', `url(${image})`);
+		$('#module-gallery-overlay-info h1').text(title);
+		$('#module-gallery-overlay-info h2').text(caption);
+	});
+	$('#module-gallery-overlay-thumbs').on('beforeChange', () => {
+		const $text = $('#module-gallery-overlay-info h1');
+		$text.text('Loading');
+		setTimeout(() => { $text.text('Loading.'); }, 400);
+		setTimeout(() => { $text.text('Loading..'); }, 800);
+		setTimeout(() => { $text.text('Loading...'); }, 1200);
+		$('#module-gallery-overlay-info h2').text('');
+		$('#module-gallery-overlay-image-inner').css('background-image', 'initial');
+	});
+
+
 	// MODULES: Parallax
 	$(window).on('load resize scroll', () => {
 		const d_scroll = $(window).scrollTop();
