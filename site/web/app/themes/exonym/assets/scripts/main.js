@@ -143,5 +143,35 @@ jQuery(document).ready(() => {
 	});
 	$('.wpcf7-form-control-wrap input, .wpcf7-form-control-wrap textarea').on('focus', e => {
 		$(e.currentTarget).next('span').fadeOut();
-	})
+	});
+
+	// FOOTER: MailChimp Signup AJAX
+	const $mailChimp = $('#form-mailchimp');
+	if ($mailChimp.length > 0) {
+		$('#form-mailchimp button').bind('click', (e) => {
+			e.preventDefault();
+			mailChimpAjax($mailChimp)
+		})
+	}
+	function mailChimpAjax($form) {
+		$('#form-mailchimp button').text('Sending...');
+		$.ajax({
+			type: $form.attr('method'),
+			url: $form.attr('action'),
+			data: $form.serialize(),
+			cache: false,
+			dataType: 'json',
+			contentType: 'application/json; charset=utf-8',
+			error: () => { alert('Could not connect to the registration server. Please try again later.') },
+			success: (data) => {
+				$('#form-mailchimp button').val('Sign Up');
+				if (data.result === 'success') {
+					$('#subscribe-result').html('<p>Thank you for subscribing. We have sent you a confirmation email.</p>');
+					$('#form-mailchimp input[type="email"]').val('');
+				} else {
+					$('#subscribe-result').html('<p>' + data.msg.substring(4) + '</p>');
+				}
+			},
+		});
+	}
 });

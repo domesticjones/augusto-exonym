@@ -21,11 +21,11 @@
 
     a {
       text-align: center;
-      display: block;
       width: 15%;
       margin: 2.5%;
 
       @include transition();
+      @include grid(space-between, center, column);
 
       &.is-current {
         opacity: 0.4;
@@ -33,6 +33,11 @@
 
       &:hover {
         transform: scale(1.05);
+      }
+
+      img {
+        margin: auto 0;
+        padding-bottom: 1rem;
       }
     }
   }
