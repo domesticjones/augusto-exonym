@@ -15,7 +15,7 @@
       $collectionsQuery = new WP_Query($collectionsQueryArgs);
       if($collectionsQuery->have_posts()):
     ?>
-      <section class="collection-more">
+      <section class="collection-more animate-on-enter">
         <h2>Collections</h2>
         <nav>
           <?php

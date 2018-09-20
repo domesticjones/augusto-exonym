@@ -196,6 +196,11 @@
         box-shadow: none;
         padding: 0.75rem 1rem;
         background-color: $gold;
+
+        &:hover {
+          background-color: $gold-trans;
+          transform: none;
+        }
       }
     }
   }

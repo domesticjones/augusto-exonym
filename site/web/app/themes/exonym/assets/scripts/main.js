@@ -97,6 +97,11 @@ jQuery(document).ready(() => {
 		$('#module-gallery-overlay-image-inner').css('background-image', 'initial');
 	});
 
+	// MODULE: Collection Link
+	$('.collection-more a.is-current').click((e) => {
+		e.preventDefault();
+		$('html, body').animate({ scrollTop: 0 }, 1500);
+	});
 
 	// MODULES: Parallax
 	$(window).on('load resize scroll', () => {
