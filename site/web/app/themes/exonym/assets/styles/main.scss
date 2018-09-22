@@ -28,6 +28,9 @@
 @import "modules/content";
 @import "modules/awards";
 @import "modules/gallery";
+@import "modules/format-gallery";
+@import "modules/format-list";
+@import "modules/format-link";
 
 /**
   Templates
@@ -36,4 +39,6 @@
 @import "templates/legal";
 @import "templates/about";
 @import "templates/contact";
+@import "templates/blog";
 @import "templates/single-collection";
+@import "templates/single-blog";

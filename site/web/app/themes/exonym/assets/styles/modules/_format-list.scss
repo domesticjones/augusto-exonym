@@ -1,0 +1,19 @@
+.format-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  h2 {
+    text-align: center;
+
+    &::after {
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+    }
+
+    span {
+      color: $gold;
+      font-size: 0.85em;
+    }
+  }
+}

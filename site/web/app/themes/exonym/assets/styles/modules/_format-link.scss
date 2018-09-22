@@ -1,0 +1,23 @@
+a.format-link {
+  display: block;
+  border-top: 1px solid $gold;
+  padding: 2rem 0;
+  text-decoration: none !important;
+  text-align: center;
+
+  @include transition();
+
+  h3 {
+    margin-bottom: 1rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+    font-weight: $font-semi;
+    color: $gold-trans;
+  }
+
+  &:hover {
+    transform: scale(0.99);
+  }
+}

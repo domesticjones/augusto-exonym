@@ -1,0 +1,40 @@
+.blog-single-header {
+  background-color: $grey;
+  border-bottom: 2px solid $black;
+  position: relative;
+  padding-bottom: 10vw;
+  margin-bottom: 14vw;
+}
+
+.blog-single-feature {
+  position: absolute;
+  left: 50%;
+  bottom: calc(-10vw - 1px);
+  width: 20vw;
+  height: 20vw;
+  background-size: cover;
+  background-position: center center;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  transform: translateX(-50%);
+
+  img {
+    display: none;
+  }
+}
+
+.blog-single-content {
+  max-width: 960px;
+  margin: 0 auto;
+  padding-bottom: 4vw;
+  font-weight: $font-light;
+
+  a {
+    color: $gold;
+    text-decoration: underline;
+  }
+
+  h2::after {
+    left: 0;
+    transform: none;
+  }
+}

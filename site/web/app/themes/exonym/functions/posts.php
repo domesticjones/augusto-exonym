@@ -15,6 +15,42 @@ function ex_post_meta($timePre = 'Posted', $authorPre = 'by') {
  );
 }
 
+// Filesize Displays
+function human_filesize($bytes, $decimals = 2) {
+  $size = array('b','kb','mb','gb', 'tb','pb','eb','zb','yb');
+  $factor = floor((strlen($bytes) - 1) / 3);
+  return sprintf("%.{$decimals}f", $bytes / pow(1024, $factor)) . @$size[$factor];
+}
+
+// Post Formats
+add_theme_support('post-formats', array('gallery', 'aside', 'link'));
+function ex_rename_post_formats($safe_text) {
+  if($safe_text == 'Aside') return 'List';
+  return $safe_text;
+}
+add_filter('esc_html', 'ex_rename_post_formats');
+
+// Require Featured Image on Blog Article
+function ex_post_check_thumbnail($post_id) {
+  if(get_post_type($post_id) != 'post') return;
+  if(!has_post_thumbnail($post_id)) {
+    set_transient('has_post_thumbnail', 'no');
+    remove_action('save_post', 'ex_post_check_thumbnail');
+    wp_update_post(array('ID' => $post_id, 'post_status' => 'draft'));
+    add_action('save_post', 'ex_post_check_thumbnail');
+  } else {
+    delete_transient('has_post_thumbnail');
+  }
+}
+function ex_post_thumbnail_error() {
+  if(get_transient('has_post_thumbnail') == 'no') {
+    echo "<div id='message' class='error'><p><strong>You must select Featured Image. Your Article is saved but it can not be published.</strong></p></div>";
+    delete_transient('has_post_thumbnail');
+  }
+}
+add_action('save_post', 'ex_post_check_thumbnail');
+add_action('admin_notices', 'ex_post_thumbnail_error');
+
 // List out categories
 function ex_categories($catPre = 'Filed under') {
  printf(__($catPre, 'exonym' ) . ': %1$s' , get_the_category_list(', '));

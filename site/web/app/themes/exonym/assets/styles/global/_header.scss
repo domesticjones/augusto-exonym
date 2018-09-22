@@ -22,7 +22,8 @@
     font-weight: $font-semi;
   }
 
-  li.current-menu-parent > a {
+  li.current-menu-parent > a,
+  li.current_page_parent > a {
     font-weight: $font-semi;
   }
 

@@ -52,7 +52,7 @@ jQuery(document).ready(() => {
 	});
 
 	// MODULE: Gallery Overlay
-	$('#module-gallery-items li').on('click', (e) => {
+	$('#module-gallery-items li, .format-gallery-action-overlay li').on('click', (e) => {
 		$('#module-gallery-overlay-image-inner').css('background-image', 'initial');
 		const $this = $(e.currentTarget);
 		const image = $this.data('image');
@@ -79,7 +79,7 @@ jQuery(document).ready(() => {
 	});
 	$('#module-gallery-overlay-thumbs').on('afterChange', () => {
 		const currentSlide = $('#module-gallery-overlay-thumbs').slick('slickCurrentSlide');
-		const $list = $('#module-gallery-items li').eq(currentSlide);
+		const $list = $('#module-gallery-items li, .format-gallery-action-overlay li').eq(currentSlide);
 		const image = $list.data('image');
 		const title = $list.find('.gallery-title').text();
 		const caption = $list.find('.gallery-caption').text();

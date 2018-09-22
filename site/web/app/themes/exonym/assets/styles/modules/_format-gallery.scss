@@ -1,0 +1,40 @@
+.format-gallery {
+  @include listStripped();
+  @include grid(center, center, row, wrap);
+
+  li {
+    margin: 1vw;
+    cursor: pointer;
+  }
+
+  img {
+    display: block;
+  }
+}
+
+.format-gallery-caption {
+  font-size: 0.85rem;
+  color: $gold;
+  margin-top: 1rem;
+
+  .gallery-title,
+  .gallery-caption {
+    position: static;
+    display: inline;
+    transform: none;
+    opacity: 1;
+    color: inherit;
+  }
+}
+
+.format-gallery-image-large li {
+  width: calc(50% - 2vw);
+}
+
+.format-gallery-image-medium li {
+  width: calc(33.3333% - 2vw);
+}
+
+.format-gallery-image-small li {
+  width: calc(25% - 2vw);
+}
