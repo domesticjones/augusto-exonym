@@ -138,3 +138,13 @@
 ul.contact-hours {
   padding-bottom: 2em;
 }
+
+@media (max-width: 1024px) {
+  .contact-wrap {
+    padding: 0;
+  }
+
+  .contact-right {
+    padding: 2vw;
+  }
+}

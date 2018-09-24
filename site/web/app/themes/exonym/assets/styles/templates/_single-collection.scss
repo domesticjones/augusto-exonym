@@ -68,5 +68,9 @@
 @media (max-width: 1024px) {
   .collection-more {
     font-size: 0.85rem;
+
+    nav a {
+      width: 20%;
+    }
   }
 }

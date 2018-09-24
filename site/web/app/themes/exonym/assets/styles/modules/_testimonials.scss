@@ -20,8 +20,8 @@
     bottom: 2rem;
 
     button {
-      width: 1rem;
-      height: 1rem;
+      width: 1em;
+      height: 1em;
       padding: 0;
       margin: 0.25em;
       border: 2px solid $black;
@@ -55,7 +55,7 @@
 
   q {
     display: block;
-    font-size: 1.75rem;
+    font-size: 1.75em;
     line-height: 1.5;
     font-weight: $font-light;
     text-align: right;
@@ -73,7 +73,7 @@
     width: auto;
     color: $gold;
     font-size: 1.25em;
-    margin: 2rem 0 1.5rem 0;
+    margin: 2em 0 1.5em 0;
     font-weight: $font-semi;
 
     &::after {
@@ -95,7 +95,7 @@
     font-weight: $font-semi;
     padding: 0;
     margin: 0;
-    font-size: 1.15rem;
+    font-size: 1.15em;
     line-height: 1.25;
   }
 
@@ -104,7 +104,19 @@
     font-style: $font-italic;
     margin: 0;
     padding: 0;
-    font-size: 1.15rem;
+    font-size: 1.15em;
     line-height: 1.25;
+  }
+}
+
+@media (max-width: 1200px) {
+  .module-testimonial {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .module-content {
+    font-size: 0.85rem;
   }
 }

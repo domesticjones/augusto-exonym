@@ -13,6 +13,10 @@ jQuery(document).ready(() => {
 		$('#nav-responsive').toggleClass('is-active');
 		$('body').toggleClass('nav-active');
 	});
+	$('#content').on('click', () => {
+		$('#responsive-nav-toggle, #nav-responsive').removeClass('is-active');
+		$('body').removeClass('nav-active');
+	});
 
 	// HEADER: Fade In Logo on Home Page
 	$(window).on('load', () => {

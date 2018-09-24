@@ -94,7 +94,7 @@
 }
 
 #responsive-nav-toggle {
-  @include hamburgerMenu(12, $black, 0.4);
+  @include hamburgerMenu(4, $gold, 0.4);
 
   display: none;
   margin-right: 1rem;
