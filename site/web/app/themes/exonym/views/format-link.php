@@ -17,7 +17,6 @@
     $linkTarget = $url['target'];
     $linkText = $url['title'];
     $linkCaption = parse_url($linkHref)['host'];
-
   }
 ?>
 <a href="<?php echo $linkHref; ?>" target="<?php echo $linkTarget; ?>" class="format-link">

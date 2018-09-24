@@ -6,7 +6,7 @@
   <div class="wrap">
     <ul id="module-gallery-items">
       <?php foreach($gallery as $image): ?>
-        <li style="background-image: url(<?php echo $image['sizes']['small']; ?>)" data-image="<?php echo $image['sizes']['large']; ?>">
+        <li style="background-image: url(<?php echo $image['sizes']['small']; ?>)" data-image="<?php echo $image['sizes']['large']; ?>" data-zoom="<?php echo $image['sizes']['jumbo']; ?>">
           <span class="gallery-title"><?php echo $image['title']; ?></span>
           <span class="gallery-caption"><?php echo $image['caption']; ?></span>
         </li>

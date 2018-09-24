@@ -18,12 +18,8 @@
     }
   }
 
-  li.current-menu-item {
-    font-weight: $font-semi;
-  }
-
-  li.current-menu-parent > a,
-  li.current_page_parent > a {
+  li.current-menu-item,
+  li.current-menu-parent > a {
     font-weight: $font-semi;
   }
 

@@ -1,5 +1,6 @@
 require('jquery-visible');
 require('slick-carousel');
+require('jquery-zoom');
 
 jQuery(document).ready(() => {
 	// Wrap embedded objects and force them into 16:9
@@ -56,9 +57,11 @@ jQuery(document).ready(() => {
 		$('#module-gallery-overlay-image-inner').css('background-image', 'initial');
 		const $this = $(e.currentTarget);
 		const image = $this.data('image');
+		const zoom = $this.data('zoom');
 		const title = $this.find('.gallery-title').text();
 		const caption = $this.find('.gallery-caption').text();
 		const index = $this.index();
+		$('#module-gallery-overlay-image').attr('data-zoom', zoom);
 		$('#module-gallery-overlay-image-inner').css('background-image', `url(${image})`);
 		$('#module-gallery-overlay-info h1').text(title);
 		$('#module-gallery-overlay-info h2').text(caption);
@@ -81,13 +84,20 @@ jQuery(document).ready(() => {
 		const currentSlide = $('#module-gallery-overlay-thumbs').slick('slickCurrentSlide');
 		const $list = $('#module-gallery-items li, .format-gallery-action-overlay li').eq(currentSlide);
 		const image = $list.data('image');
+		const zoom = $list.data('zoom');
 		const title = $list.find('.gallery-title').text();
 		const caption = $list.find('.gallery-caption').text();
+		$('#module-gallery-overlay-image').attr('data-zoom', zoom);
 		$('#module-gallery-overlay-image-inner').css('background-image', `url(${image})`);
 		$('#module-gallery-overlay-info h1').text(title);
 		$('#module-gallery-overlay-info h2').text(caption);
+		$('#module-gallery-overlay-image').zoom({
+			url: zoom,
+			duration: 240,
+		});
 	});
 	$('#module-gallery-overlay-thumbs').on('beforeChange', () => {
+		$('#module-gallery-overlay-image').trigger('zoom.destroy');
 		const $text = $('#module-gallery-overlay-info h1');
 		$text.text('Loading');
 		setTimeout(() => { $text.text('Loading.'); }, 400);

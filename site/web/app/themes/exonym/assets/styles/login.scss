@@ -1,0 +1,76 @@
+/**
+  Configuration Settings & Mixins
+  ---------------------------------------------------------------------- */
+@import "config/effects";
+@import "config/animation";
+@import "config/functions";
+@import "config/grid";
+@import "config/reset";
+@import "config/colors";
+@import "config/typography";
+@import "config/forms";
+@import "config/hamburger";
+
+body {
+  background-color: $grey;
+}
+
+a {
+  color: $black !important;
+
+  &:hover {
+    color: $gold !important;
+  }
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="color"]:focus,
+input[type="date"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="email"]:focus,
+input[type="month"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="time"]:focus,
+input[type="url"]:focus,
+input[type="week"]:focus,
+input[type="checkbox"]:focus,
+input[type="radio"]:focus,
+select:focus,
+textarea:focus {
+  border: none;
+  box-shadow: none;
+  padding: 1rem;
+}
+
+.login h1 a {
+  display: block;
+  background-size: contain;
+  width: 100%;
+}
+
+.login form {
+  box-shadow: 0 3px 6px $gold-trans;
+}
+
+.login label {
+  color: $black;
+  font-weight: $font-light;
+}
+
+.wp-core-ui .button-primary {
+  background-color: $gold;
+  border: none;
+  border-radius: 0;
+  text-shadow: none;
+  box-shadow: 0 3px 6px $gold-trans;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $gold-trans;
+  }
+}
