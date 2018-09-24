@@ -31,6 +31,11 @@
     left: calc(100% - 2rem);
     transform: rotate(45deg);
   }
+
+  span {
+    position: relative;
+    z-index: 3;
+  }
 }
 
 .ig-likes {
@@ -131,7 +136,7 @@
 
   font-style: $font-italic;
   font-weight: $font-light;
-  font-size: 0.75rem;
+  font-size: 0.75em;
 
   li a {
     display: block;
@@ -149,7 +154,7 @@
 
 .hours-footer {
   font-weight: $font-light;
-  font-size: 0.85rem;
+  font-size: 0.85em;
 }
 
 #footer {
@@ -172,15 +177,15 @@
   }
 
   h2 {
-    font-size: 1.15rem;
+    font-size: 1.15em;
   }
 
   form {
-    margin-bottom: 2rem;
+    margin-bottom: 2em;
 
     p {
-      font-size: 0.85rem;
-      padding-bottom: 0.5rem;
+      font-size: 0.85em;
+      padding-bottom: 0.5em;
     }
 
     .form-mailchimp-fields {
@@ -214,7 +219,7 @@
   }
 
   .copyright {
-    font-size: 0.75rem;
+    font-size: 0.75em;
     padding-bottom: 0;
     font-weight: $font-light;
   }
@@ -255,3 +260,22 @@
 /**
   Responsive Breakpoints
   ---------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .ig-user {
+    font-size: 0.85rem;
+
+    img {
+      height: 1rem;
+    }
+
+    &::after {
+      left: calc(100% - 1.5rem);
+      height: 3rem;
+      width: 3rem;
+    }
+  }
+
+  #footer {
+    font-size: 0.85rem;
+  }
+}

@@ -38,7 +38,7 @@
 
       img {
         margin: auto 0;
-        padding-bottom: 1rem;
+        padding-bottom: 1em;
       }
     }
   }
@@ -62,5 +62,11 @@
 
   br {
     display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .collection-more {
+    font-size: 0.85rem;
   }
 }

@@ -10,6 +10,8 @@ jQuery(document).ready(() => {
 	$('#responsive-nav-toggle').click(e => {
 		const $this = $(e.currentTarget);
 		$this.toggleClass('is-active');
+		$('#nav-responsive').toggleClass('is-active');
+		$('body').toggleClass('nav-active');
 	});
 
 	// HEADER: Fade In Logo on Home Page

@@ -11,6 +11,12 @@ body {
   overflow-x: hidden;
 }
 
+#container {
+  @include transition(all 650ms ease-in-out);
+
+  transform-origin: right;
+}
+
 #content {
   background-color: $white;
   padding-top: 6rem;
@@ -69,5 +75,9 @@ a {
   .wrap {
     width: 100%;
     padding: 0 2rem;
+  }
+
+  #content {
+    padding-top: 4rem;
   }
 }

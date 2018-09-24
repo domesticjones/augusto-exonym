@@ -49,3 +49,20 @@
     height: 4rem;
   }
 }
+
+@media (max-width: 1024px) {
+  .logo-home,
+  .logo-home.is-scrolled {
+    height: 3rem;
+    opacity: 1;
+  }
+
+  .intro-content {
+    font-weight: $font-light;
+
+    strong,
+    a {
+      font-weight: $font-semi;
+    }
+  }
+}

@@ -94,11 +94,91 @@
 }
 
 #responsive-nav-toggle {
-  @include hamburgerMenu(12, $black, 0.5);
+  @include hamburgerMenu(12, $black, 0.4);
 
   display: none;
   margin-right: 1rem;
 }
+
+/**
+  Responsive Menu
+  ---------------------------------------------------------------------- */
+/* stylelint-disable */
+#nav-responsive {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  right: 0;
+  width: 50vw;
+  height: 100vh;
+  background-color: $black;
+  padding: 2vw;
+  color: $grey;
+  transform: translateX(100%) rotateY(-10deg);
+  transform-origin: left;
+
+  @include transition(all 650ms ease-in-out);
+
+  &.is-active {
+    transform: translateX(0) rotateY(0deg);
+  }
+
+  ul {
+    @include listStripped();
+
+    position: relative;
+
+    li {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .menu {
+    margin-bottom: 2rem;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 4rem;
+      height: 2px;
+      margin-top: 1.5rem;
+      background-color: $gold;
+    }
+  }
+
+  .menu-item {
+    font-size: 1.15em;
+
+    a {
+      color: $white;
+    }
+  }
+
+  .nav-phone,
+  .nav-email {
+    span {
+      display: block;
+    }
+
+    .name {
+      display: none;
+    }
+
+    a {
+      color: $white;
+    }
+  }
+
+  .address-footer a {
+    color: $white;
+  }
+}
+
+body.nav-active #container {
+  transform: translateX(-50vw) rotateY(-10deg);
+  opacity: 0.5;
+}
+/* stylelint-enable */
 
 /**
   Responsive Breakpoints
@@ -106,6 +186,7 @@
 @media (max-width: 1024px) {
   #header {
     padding: 0.5rem;
+    height: 4rem;
   }
 
   .nav-header,
