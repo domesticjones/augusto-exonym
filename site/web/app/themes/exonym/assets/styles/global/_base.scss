@@ -22,6 +22,10 @@ body {
   position: relative;
 }
 
+.error404 .intro-content {
+  text-align: center;
+}
+
 /**
   Global Link Defaults
   ---------------------------------------------------------------------- */
@@ -30,7 +34,7 @@ a {
 }
 
 /**
-  Wordpress Image ALignment
+  Wordpress Image Alignment
   ---------------------------------------------------------------------- */
 .aligncenter {
   margin: 1em auto;

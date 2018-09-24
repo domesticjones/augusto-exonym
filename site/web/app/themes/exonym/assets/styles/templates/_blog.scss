@@ -9,7 +9,7 @@
 }
 
 .blog-body {
-  padding: 6vw 0;
+  padding: 6vw 0 4vw 0;
 }
 
 .blog-articles-body {
@@ -147,5 +147,32 @@
     text-decoration: none;
     color: $gold-trans;
     border-bottom: 1px solid transparent;
+  }
+}
+
+.alm-load-more-btn {
+  display: block;
+  box-shadow: none;
+  background-color: $black;
+  font-size: 0;
+  width: 4rem;
+  min-width: 4rem;
+  height: 4rem;
+  padding: 0;
+  margin: 0 auto;
+  opacity: 0;
+  background-image: url('../images/throbber-augusto.gif');
+
+  @include transition();
+
+  &:hover,
+  &:active,
+  &:focus {
+    box-shadow: none;
+    background-color: transparent;
+  }
+
+  &.loading {
+    opacity: 1;
   }
 }

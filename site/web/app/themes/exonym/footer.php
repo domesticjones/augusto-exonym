@@ -62,8 +62,8 @@
         </div>
         <div class="footer-right">
           <h2>Stay Connected</h2>
-          <form id="form-mailchimp" method="GET" action="//augustofinerugs.us13.list-manage.com/subscribe/post-json?u=26d0104ea990b4d673adb8585&id=2856f6771c">
-            <p>Updates on news, events, and products.</p>
+          <form id="form-mailchimp" method="GET" action="https://augustofinerugs.us13.list-manage.com/subscribe/post-json?u=26d0104ea990b4d673adb8585&id=2856f6771c&c=?">
+            <p id="form-mailchimp-message">Updates on news, events, and products.</p>
             <div class="form-mailchimp-fields">
               <input type="email" name="EMAIL" placeholder="Enter Your Email Address" required>
               <button type="submit">

@@ -185,6 +185,10 @@
 
     .form-mailchimp-fields {
       @include grid();
+      @include transition();
+
+      max-height: 4rem;
+      overflow: hidden;
 
       input,
       button {
@@ -202,6 +206,10 @@
           transform: none;
         }
       }
+
+      &.is-sent {
+        max-height: 0;
+      }
     }
   }
 
@@ -212,6 +220,8 @@
   }
 
   .footer-left {
+    max-width: 33.333%;
+
     ul {
       @include listStripped();
 
@@ -232,6 +242,7 @@
 
   .footer-right {
     text-align: right;
+    max-width: 33.333%;
 
     h2::after {
       left: auto;

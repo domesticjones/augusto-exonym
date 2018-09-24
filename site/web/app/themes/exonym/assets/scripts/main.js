@@ -166,7 +166,7 @@ jQuery(document).ready(() => {
 		$('#form-mailchimp button').bind('click', (e) => {
 			e.preventDefault();
 			mailChimpAjax($mailChimp)
-		})
+		});
 	}
 	function mailChimpAjax($form) {
 		$('#form-mailchimp button').text('Sending...');
@@ -179,12 +179,14 @@ jQuery(document).ready(() => {
 			contentType: 'application/json; charset=utf-8',
 			error: () => { alert('Could not connect to the registration server. Please try again later.') },
 			success: (data) => {
-				$('#form-mailchimp button').val('Sign Up');
+				$('#form-mailchimp button').val('Sending...');
 				if (data.result === 'success') {
-					$('#subscribe-result').html('<p>Thank you for subscribing. We have sent you a confirmation email.</p>');
-					$('#form-mailchimp input[type="email"]').val('');
+					$('#form-mailchimp input[type="email"]').val('').attr('placeholder', 'Thank you for signing up!');
+					$('#form-mailchimp .form-mailchimp-fields').addClass('is-sent');
+					$('#form-mailchimp-message').html('Success. Thank you for signing up to our mailing list.<br />Please check your inbox.');
 				} else {
-					$('#subscribe-result').html('<p>' + data.msg.substring(4) + '</p>');
+					$('#form-mailchimp-message').html(data.msg);
+					$('#form-mailchimp button').text('Sign Up');
 				}
 			},
 		});

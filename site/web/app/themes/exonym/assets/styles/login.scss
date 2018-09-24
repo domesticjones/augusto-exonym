@@ -43,25 +43,24 @@ select:focus,
 textarea:focus {
   border: none;
   box-shadow: none;
-  padding: 1rem;
 }
 
-.login h1 a {
+#login h1 a {
   display: block;
   background-size: contain;
   width: 100%;
 }
 
-.login form {
+#login form {
   box-shadow: 0 3px 6px $gold-trans;
 }
 
-.login label {
+#login label {
   color: $black;
   font-weight: $font-light;
 }
 
-.wp-core-ui .button-primary {
+.login.wp-core-ui .button-primary {
   background-color: $gold;
   border: none;
   border-radius: 0;
@@ -72,5 +71,7 @@ textarea:focus {
   &:active,
   &:focus {
     background-color: $gold-trans;
+    outline: none;
+    box-shadow: none;
   }
 }

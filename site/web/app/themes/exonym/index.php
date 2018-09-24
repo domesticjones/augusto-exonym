@@ -26,18 +26,7 @@
     <?php endwhile; ?>
   </article>
   <?php endif; wp_reset_postdata(); ?>
-  <div class="blog-articles-body">
-    <?php while(have_posts()): the_post(); ?>
-      <article class="blog-article">
-        <a href="<?php the_permalink(); ?>" class="blog-article-image" style="background-image: url(<?php echo get_the_post_thumbnail_url($post->ID, 'medium'); ?>);"><?php the_post_thumbnail('medium'); ?></a>
-        <div class="blog-article-desc">
-          <h2><?php the_title(); ?></h2>
-          <?php the_excerpt(); ?>
-          <a href="<?php the_permalink(); ?>" class="blog-article-link">Read More</a>
-        </div>
-      </article>
-    <?php endwhile; ?>
-  </div>
+  <?php echo do_shortcode('[ajax_load_more post_type="post" posts_per_page="3" orderby="menu_order" offset="1" transition_container="false" button_loading_label="Loading Articles..."]'); ?>
 </section>
 <?php endif; ?>
 <?
