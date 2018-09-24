@@ -120,3 +120,32 @@
     font-size: 0.85rem;
   }
 }
+
+@media (max-width: 768px) {
+  .module-testimonials {
+    position: static;
+    width: 100%;
+
+    .slick-track {
+      height: auto !important;
+    }
+  }
+
+  .module-testimonial {
+    height: auto;
+    padding: 0 2vw;
+
+    blockquote {
+      padding: 4vw 0 6rem 0;
+    }
+
+    q,
+    cite {
+      text-align: center;
+    }
+
+    h2 {
+      @include grid(center, center);
+    }
+  }
+}

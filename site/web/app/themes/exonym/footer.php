@@ -101,7 +101,7 @@
       'after' => '',							            // after the menu
       'link_before' => '',					          // before each link
       'link_after' => '',						          // after each link
-      'depth' => 1,							              // limit the depth of the nav
+      'depth' => 0,							              // limit the depth of the nav
       'fallback_cb' => ''						          // fallback function
     )); ?>
     <?php

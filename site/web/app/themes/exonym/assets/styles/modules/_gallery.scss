@@ -233,3 +233,32 @@
     width: auto;
   }
 }
+
+@media (max-width: 768px) {
+  #module-gallery-overlay {
+    display: block;
+    overflow: auto;
+
+    & > * {
+      flex: 1 0 auto;
+    }
+  }
+
+  #module-gallery-overlay-image {
+    height: 60vh;
+    width: 100%;
+  }
+
+  #module-gallery-overlay-info {
+    width: 100%;
+    text-align: center;
+
+    h3 {
+      margin: 2vw 0;
+    }
+  }
+
+  .module-gallery-overlay-slider {
+    display: none;
+  }
+}

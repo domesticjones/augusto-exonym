@@ -279,3 +279,21 @@
     font-size: 0.85rem;
   }
 }
+
+@media (max-width: 768px) {
+  #footer-instagram ul {
+    @include grid(center, center, row, wrap);
+
+    li {
+      width: 33.333vw;
+      height: 33.333vw;
+    }
+  }
+
+  #footer {
+    .footer-left,
+    .footer-right {
+      max-width: 50%;
+    }
+  }
+}

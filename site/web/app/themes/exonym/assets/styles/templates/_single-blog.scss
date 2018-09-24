@@ -45,3 +45,16 @@
     padding: 0 2vw;
   }
 }
+
+@media (max-width: 768px) {
+  .blog-single-feature {
+    width: 50vw;
+    height: 50vw;
+    bottom: calc(-25vw - 1px);
+  }
+
+  .blog-single-header {
+    padding-bottom: 25vw;
+    margin-bottom: 30vw;
+  }
+}

@@ -148,3 +148,23 @@ ul.contact-hours {
     padding: 2vw;
   }
 }
+
+@media (max-width: 768px) {
+  .contact-wrap {
+    display: block;
+    padding-bottom: 4vw;
+  }
+
+  .contact-left {
+    width: 100%;
+    height: 50vh;
+  }
+
+  .contact-right {
+    width: 100%;
+
+    h1 {
+      @include grid(center, center);
+    }
+  }
+}

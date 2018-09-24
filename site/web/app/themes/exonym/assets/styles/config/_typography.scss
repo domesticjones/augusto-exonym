@@ -183,6 +183,12 @@ h6 {
   letter-spacing: 0.25em;
 }
 
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.75em;
+  }
+}
+
 /**
   Global List Settings
   ---------------------------------------------------------------------- */

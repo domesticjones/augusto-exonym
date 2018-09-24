@@ -56,6 +56,7 @@ jQuery(document).ready(() => {
 		dots: true,
 		autoplaySpeed: 6500,
 		speed: 1000,
+		adaptiveHeight: true,
 	});
 
 	// MODULE: Gallery Overlay
@@ -85,6 +86,9 @@ jQuery(document).ready(() => {
 		centerMode: true,
 		focusOnSelect: true,
 		speed: 1500,
+		responsive: [{
+      breakpoint: 768,
+    }],
 	});
 	$('#module-gallery-overlay-thumbs').on('afterChange', () => {
 		const currentSlide = $('#module-gallery-overlay-thumbs').slick('slickCurrentSlide');

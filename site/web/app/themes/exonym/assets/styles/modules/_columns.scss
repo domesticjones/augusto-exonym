@@ -41,3 +41,16 @@
     font-size: 0.85rem;
   }
 }
+
+@media (max-width: 768px) {
+  .module-columns-row {
+    @include grid(space-between, center, row, wrap);
+
+    & > li {
+      width: 50%;
+      min-width: 50%;
+      flex: none;
+      padding: 2vw !important;
+    }
+  }
+}

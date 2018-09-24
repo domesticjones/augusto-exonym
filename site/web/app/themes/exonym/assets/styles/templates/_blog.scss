@@ -176,3 +176,38 @@
     opacity: 1;
   }
 }
+
+@media (max-width: 768px) {
+  .blog-header {
+    display: none;
+  }
+
+  .blog-body {
+    padding: 0;
+  }
+
+  .blog-article {
+    display: block !important;
+    width: 100%;
+    margin: 0 !important;
+
+    &::before {
+      top: calc(50vw - 2rem) !important;
+      left: 2rem !important;
+    }
+  }
+
+  .blog-article-desc {
+    width: 100% !important;
+    padding: 4vw 2vw;
+  }
+
+  .blog-article-image {
+    width: 100% !important;
+    height: 50vw;
+  }
+
+  .blog-article-link {
+    margin-bottom: 4vw;
+  }
+}
