@@ -16,10 +16,6 @@
 }
 
 .page-template-page-home {
-  .module-slideshow-slide {
-    height: 30vw;
-  }
-
   #content {
     padding-top: 4rem;
   }
@@ -71,5 +67,15 @@
   .intro-content {
     width: 100%;
     padding: 2vw;
+  }
+}
+
+@media (max-width: 767px) {
+  .home .module-slideshow {
+    margin-bottom: 4vw;
+  }
+
+  .intro-content {
+    padding: 4vw;
   }
 }

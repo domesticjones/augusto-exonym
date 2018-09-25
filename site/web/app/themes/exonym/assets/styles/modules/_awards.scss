@@ -7,9 +7,9 @@
   @include grid(center, stretch, row, wrap);
 
   img {
-    height: 6rem;
+    height: 6em;
     width: auto;
-    margin: 2rem 0;
+    margin: 2em 0;
 
     @include transition();
   }
@@ -20,7 +20,7 @@
     width: 20vw;
     margin: 5vw;
     border: 2px solid $gold-trans;
-    padding: 2rem;
+    padding: 2em;
 
     &:hover {
       img {
@@ -30,12 +30,12 @@
   }
 
   h2 {
-    font-size: 1.15rem;
+    font-size: 1.15em;
     font-style: $font-italic;
     font-weight: $font-light;
     margin: 0;
     padding: 0;
-    line-height: 2rem;
+    line-height: 2em;
 
     &::after {
       display: none;
@@ -43,20 +43,20 @@
   }
 
   h3 {
-    font-size: 1.5rem;
+    font-size: 1.5em;
     font-weight: $font-semi;
     margin: 0;
     padding: 0;
-    line-height: 2rem;
+    line-height: 2em;
   }
 
   h4 {
-    font-size: 1.15rem;
+    font-size: 1.15em;
     color: $gold;
     margin: 0;
     padding: 0;
     font-weight: $font-light;
-    line-height: 2rem;
+    line-height: 2em;
   }
 }
 
@@ -70,5 +70,11 @@
   .module-awards-list li {
     width: 90vw;
     margin: 2.5vw 5vw;
+  }
+}
+
+@media (max-width: 767px) {
+  .module-awards-list li {
+    font-size: 0.85rem;
   }
 }

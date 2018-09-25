@@ -262,3 +262,11 @@
     display: none;
   }
 }
+
+@media (max-width: 767px) {
+  #module-gallery-items li {
+    width: 45%;
+    margin: 2.5%;
+    height: 50vw;
+  }
+}

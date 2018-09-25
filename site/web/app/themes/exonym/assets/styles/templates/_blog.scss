@@ -192,8 +192,11 @@
     margin: 0 !important;
 
     &::before {
-      top: calc(50vw - 2rem) !important;
-      left: 2rem !important;
+      display: block !important;
+      top: calc(50vw - 1.5rem) !important;
+      left: 4vw !important;
+      width: 3rem;
+      height: 3rem;
     }
   }
 
@@ -205,9 +208,16 @@
   .blog-article-image {
     width: 100% !important;
     height: 50vw;
+    transform-origin: bottom !important;
   }
 
   .blog-article-link {
     margin-bottom: 4vw;
+  }
+}
+
+@media (max-width: 767px) {
+  .blog-article.blog-first h2::before {
+    display: none;
   }
 }

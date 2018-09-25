@@ -149,3 +149,13 @@
     }
   }
 }
+
+@media (max-width: 767px) {
+  .module-testimonial {
+    padding: 4vw;
+
+    blockquote {
+      padding-bottom: 4rem;
+    }
+  }
+}

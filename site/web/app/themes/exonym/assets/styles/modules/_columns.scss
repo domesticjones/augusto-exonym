@@ -54,3 +54,9 @@
     }
   }
 }
+
+@media (max-width: 767px) {
+  .module-columns-row > li {
+    width: 100% !important;
+  }
+}

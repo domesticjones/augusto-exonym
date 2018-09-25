@@ -80,3 +80,34 @@
     width: 28%;
   }
 }
+
+@media (max-width: 767px) {
+  .collection-more nav {
+    display: block;
+    padding: 4vw;
+
+    a {
+      display: block;
+      width: 100%;
+      margin: 0 0 8vw 0;
+
+      img {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  .collection-more h2 {
+    margin-top: 6vw;
+  }
+
+  .header-collection {
+    height: 50vw;
+  }
+
+  .single-collection {
+    h1 {
+      margin-top: 4vw;
+    }
+  }
+}

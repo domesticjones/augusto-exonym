@@ -81,3 +81,9 @@ a {
     padding-top: 4rem;
   }
 }
+
+@media (max-width: 767px) {
+  .wrap {
+    padding: 0 4vw;
+  }
+}

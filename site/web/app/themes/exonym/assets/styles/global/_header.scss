@@ -209,3 +209,15 @@ body.nav-active #container {
     display: block;
   }
 }
+
+@media (max-width: 767px) {
+  #nav-responsive {
+    font-size: 0.75rem;
+    width: 75vw;
+    padding: 4vw;
+  }
+
+  body.nav-active #container {
+    transform: translateX(-75vw) rotateY(-10deg);
+  }
+}

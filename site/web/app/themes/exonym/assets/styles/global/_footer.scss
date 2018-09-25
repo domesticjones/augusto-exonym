@@ -297,3 +297,24 @@
     }
   }
 }
+
+@media (max-width: 767px) {
+  #footer .wrap {
+    display: block;
+
+    h2 {
+      display: none;
+    }
+
+    .footer-left,
+    .footer-right {
+      max-width: 100%;
+      padding: 4vw 0;
+    }
+  }
+
+  #footer-instagram ul li {
+    width: 50vw;
+    height: 50vw;
+  }
+}

@@ -56,5 +56,19 @@
   .blog-single-header {
     padding-bottom: 25vw;
     margin-bottom: 30vw;
+
+    h1 {
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .blog-article-desc {
+    padding: 4vw 4vw 8vw 4vw !important;
+  }
+
+  .blog-single-content {
+    padding: 4vw;
   }
 }

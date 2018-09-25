@@ -4,3 +4,10 @@
     height: 40vw;
   }
 }
+
+@media (max-width: 767px) {
+  .page-template-page-about .module-slideshow-slide,
+  .page-template-page-about .slick-track {
+    height: 75vw;
+  }
+}

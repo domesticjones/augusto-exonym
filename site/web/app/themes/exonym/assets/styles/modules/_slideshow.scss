@@ -26,3 +26,14 @@
 .module-slideshow-description {
   display: none;
 }
+
+@media (max-width: 767px) {
+  .slick-track,
+  .module-slideshow-slide {
+    height: 75vw;
+  }
+
+  .slideshow-logo {
+    display: none;
+  }
+}
