@@ -27,15 +27,16 @@ jQuery(document).ready(() => {
 	$(window).on('load', () => {
 		if ($('body').hasClass('page-template-page-home')) {
 			$('.logo-header').addClass('logo-home');
+			$('#header').addClass('header-home');
 		}
 	});
 	$(window).on('scroll resize', () => {
 		if ($('body').hasClass('page-template-page-home')) {
 			const headerHeight = $('.module-slideshow').outerHeight();
 			if($(window).scrollTop() > headerHeight) {
-				$('.logo-header').addClass('is-scrolled');
+				$('.logo-header, #header').addClass('is-scrolled');
 			} else {
-				$('.logo-header').removeClass('is-scrolled');
+				$('.logo-header, #header').removeClass('is-scrolled');
 			}
 		}
 	});

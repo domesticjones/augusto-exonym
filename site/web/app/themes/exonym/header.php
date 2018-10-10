@@ -17,6 +17,7 @@
         <a href="<?php echo get_home_url(); ?>" class="logo-header-link">
 					<img src="<?php ex_logo('alternate'); ?>" alt="Logo for <?php ex_brand(); ?>" class="logo-header" />
 				</a>
+				<img src="<?php ex_logo(); ?>" alt="Large logo for <?php ex_brand(); ?>" class="logo-home-large">
         <nav class="nav-header" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
           <?php wp_nav_menu(array(
             'container' => false,								// remove nav container
