@@ -17,15 +17,15 @@
   }
 
   nav {
-    @include grid(center, stretch, row, wrap);
+    @include grid(center, flex-end, row, wrap);
 
     a {
       text-align: center;
       width: 15%;
       margin: 2.5%;
+      display: block;
 
       @include transition();
-      @include grid(space-between, center, column);
 
       &.is-current {
         opacity: 0.4;
@@ -37,6 +37,7 @@
       }
 
       img {
+        display: block;
         margin: auto 0;
         padding-bottom: 1em;
       }

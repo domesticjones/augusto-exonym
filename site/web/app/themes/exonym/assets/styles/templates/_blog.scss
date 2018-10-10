@@ -37,7 +37,13 @@
   padding: 2vw 1vw;
   position: relative;
   z-index: 2;
+  width: 100%;
   font-weight: $font-light;
+
+  p,
+  h2 {
+    max-width: 100%;
+  }
 
   h2 {
     position: relative;

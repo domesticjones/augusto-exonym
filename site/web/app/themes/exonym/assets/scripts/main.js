@@ -18,6 +18,11 @@ jQuery(document).ready(() => {
 		$('body').removeClass('nav-active');
 	});
 
+	// HEADER: Disable collections dropdown behaviour
+	$('.menu-item-has-children > a').click(e => {
+		e.preventDefault();
+	});
+
 	// HEADER: Fade In Logo on Home Page
 	$(window).on('load', () => {
 		if ($('body').hasClass('page-template-page-home')) {
@@ -74,9 +79,24 @@ jQuery(document).ready(() => {
 		$('#module-gallery-overlay-info h2').text(caption);
 		$('#module-gallery-overlay').addClass('is-active');
 		$('#module-gallery-overlay-thumbs').slick('slickGoTo', parseInt(index));
+		$('body').addClass('gallery-active');
 	});
 	$('#overlay-close').on('click', () => {
 		$('#module-gallery-overlay').removeClass('is-active');
+		$('body').removeClass('gallery-active');
+	});
+
+	// MODULE: Gallery Back Button Behaviour
+	$('body').on('click', () => {
+		if ($('body').hasClass('gallery-active')) {
+			if (window.history && window.history.pushState) {
+				window.history.pushState('forward', null, '');
+				$(window).on('popstate', () => {
+					$('#module-gallery-overlay').removeClass('is-active');
+					$('body').removeClass('gallery-active');
+				});
+			}
+		}
 	});
 
 	// MODULE: Gallery Thumbs
@@ -193,7 +213,7 @@ jQuery(document).ready(() => {
 				if (data.result === 'success') {
 					$('#form-mailchimp input[type="email"]').val('').attr('placeholder', 'Thank you for signing up!');
 					$('#form-mailchimp .form-mailchimp-fields').addClass('is-sent');
-					$('#form-mailchimp-message').html('Success. Thank you for signing up to our mailing list.<br />Please check your inbox.');
+					$('#form-mailchimp-message').html('Success. You have successfully subscribed to our mailing list.');
 				} else {
 					$('#form-mailchimp-message').html(data.msg);
 					$('#form-mailchimp button').text('Sign Up');

@@ -28,6 +28,8 @@
   padding-bottom: 4vw;
   font-weight: $font-light;
 
+  @include clearfix();
+
   a {
     color: $gold;
     text-decoration: underline;
