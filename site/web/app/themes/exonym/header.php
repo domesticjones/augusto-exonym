@@ -14,7 +14,7 @@
 	<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
 		<div id="container">
     	<header id="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
-        <a href="<?php echo get_home_url(); ?>">
+        <a href="<?php echo get_home_url(); ?>" class="logo-header-link">
 					<img src="<?php ex_logo('alternate'); ?>" alt="Logo for <?php ex_brand(); ?>" class="logo-header" />
 				</a>
         <nav class="nav-header" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
