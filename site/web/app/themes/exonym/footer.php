@@ -2,7 +2,7 @@
   /* ==============
      DEFAULT FOOTER
      ============== */
-  $ig_access_token = '3297965403.1677ed0.ea1a910d9ea74f02a71f98b9f917eb51';
+  $ig_access_token = get_field('instagram_token', 'options');
   $ig_count = 5;
   $ig_json_link = 'https://api.instagram.com/v1/users/self/media/recent/?';
   $ig_json_link.= 'access_token=' . $ig_access_token . '&count=' . $ig_count;

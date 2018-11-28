@@ -2,4 +2,23 @@
   background-color: $black;
   color: $white;
   padding: 4vw 0;
+
+  a {
+    color: $grey;
+    border-bottom: 1px solid $gold;
+
+    @include fontItalic();
+    @include transition();
+
+    &:hover {
+      color: $white;
+      opacity: 0.75;
+    }
+  }
+
+  p:last-of-type,
+  ul:last-of-type,
+  ol:last-of-type {
+    padding-bottom: 0;
+  }
 }

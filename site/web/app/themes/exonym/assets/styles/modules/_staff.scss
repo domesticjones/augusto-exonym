@@ -1,0 +1,101 @@
+.module-staff {
+  background-color: $grey;
+  color: $black;
+  padding: 4vw 0;
+}
+
+.module-staff-list {
+  @extend .wrap;
+
+  list-style-type: none;
+  margin: 0 auto;
+}
+
+.staff-photo {
+  width: 30%;
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.staff-content {
+  @include grid(flex-start, flex-start, column);
+
+  width: 70%;
+}
+
+.staff-name {
+  order: 2;
+  color: $gold;
+  margin-bottom: 0.25em;
+  font-size: 1.5rem;
+
+  &::after {
+    display: none;
+  }
+}
+
+.staff-position {
+  order: 3;
+  color: $gold-trans;
+  margin-bottom: 0;
+
+  @include fontItalic();
+}
+
+.staff-bio {
+  order: 1;
+  font-weight: $font-normal;
+}
+
+.staff-single {
+  @include grid(center, center, row);
+
+  margin-bottom: 4vw;
+
+  .staff-content {
+    padding: 0 0 0 4vw;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &:nth-child(even) {
+    @include grid(center, center, row-reverse);
+
+    .staff-content {
+      padding: 0 4vw 0 0;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .staff-photo,
+  .staff-content {
+    width: 50%;
+  }
+}
+
+@media (max-width: 800px) {
+  .staff-single {
+    flex-direction: column !important;
+  }
+
+  .staff-photo {
+    width: 100%;
+    margin-bottom: 4vw;
+  }
+
+  .staff-content {
+    width: 100%;
+    padding: 0 !important;
+  }
+
+  .staff-bio {
+    order: 5;
+    padding-top: 1rem;
+  }
+}
