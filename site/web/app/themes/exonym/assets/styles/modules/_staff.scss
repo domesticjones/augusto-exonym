@@ -24,6 +24,7 @@
   @include grid(flex-start, flex-start, column);
 
   width: 70%;
+  align-items: stretch;
 }
 
 .staff-name {
